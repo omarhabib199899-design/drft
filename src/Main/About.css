@@ -86,3 +86,57 @@
   font-size: 18px;
   line-height: 26px;
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding: 80px 20px;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 0.95rem;
+  }
+
+  .about-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .our-story {
+    font-size: 28px;
+  }
+
+  .story-text {
+    font-size: 15px;
+    line-height: 1.6; /* ❗ fixed (10px was breaking readability) */
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 15px;
+  }
+
+  .about-sec {
+    font-size: 20px;
+  }
+
+  .about-p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn-journey-gold {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
