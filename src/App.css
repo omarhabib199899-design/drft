@@ -1,0 +1,32 @@
+:root {
+  --primary-blue: #00b4d8;
+  --secondary-blue: #0077b6;
+  --accent-orange: #ffb703;
+  --text-dark: #333;
+  --text-light: #ffffff;
+  --border-radius: 30px; /* High rounding as seen in your designs */
+  --card-radius: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif; /* Closest match to the UI */
+  background: #f8fbff;
+}
+
+/* Gradient Background for the bottom section */
+.footer-gradient-bg {
+  background: linear-gradient(180deg, #007bbd 0%, #005a9c 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+/* Add this at the bottom of App.css */
+.App {
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling on small screens */
+}
+
+section {
+  padding: 40px 15px; /* Thinner padding for mobile */
+}

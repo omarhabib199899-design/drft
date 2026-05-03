@@ -1,0 +1,88 @@
+.about-wrapper {
+  background: linear-gradient(135deg, #4b3621 0%, #8b5a2b 100%);
+  min-height: 100vh;
+  padding: 100px 10%;
+  color: white;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.about-header p {
+  opacity: 0.8;
+  margin-bottom: 50px;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  color: #333;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.story-section h2,
+.cta-section h2 {
+  color: #e67e22;
+  margin-bottom: 20px;
+}
+.story-section p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.value-item h3 {
+  margin: 15px 0 10px;
+  color: #333;
+}
+.value-item p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+.value-icon {
+  font-size: 1.5rem;
+  color: #00adef;
+}
+
+.cta-section {
+  text-align: center;
+}
+.cta-section h2 {
+  margin-bottom: 10px;
+}
+.cta-section p {
+  margin-bottom: 30px;
+}
+.our-story {
+  font-size: 40px;
+}
+.story-text {
+  font-size: 18px;
+  line-height: 10px;
+}
+.about-sec {
+  font-size: 25px;
+}
+.about-p {
+  font-size: 18px;
+  line-height: 26px;
+}

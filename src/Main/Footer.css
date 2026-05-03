@@ -1,0 +1,119 @@
+.main-footer {
+  width: 100%;
+}
+
+.how-it-works {
+  padding: 80px 10%;
+  text-align: center;
+  background-color: #fffef2; /* The light cream/off-white in Image 3 */
+}
+
+.section-title-orange {
+  color: #e67e22;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.steps-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+}
+
+.step-number {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step-number.orange {
+  background: #f39c12;
+}
+.step-number.cyan {
+  background: #00d2ff;
+}
+.step-number.blue {
+  background: #3498db;
+}
+
+.step-item h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+.step-item p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* The Bottom Gradient Part */
+.cta-gradient {
+  background: linear-gradient(180deg, #00adef 0%, #0072b5 100%);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* Optional: Add the faint grid pattern seen in the figma */
+.cta-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+.cta-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 35px;
+}
+
+.btn-journey-gold {
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  border: none;
+  padding: 18px 45px;
+  border-radius: 40px;
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.btn-journey-gold:hover {
+  transform: scale(1.05);
+}

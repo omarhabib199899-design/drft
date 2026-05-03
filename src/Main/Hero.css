@@ -1,0 +1,205 @@
+/* Ensure the wrapper takes the whole screen */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background grid setup */
+.bg-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.grid-cell {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Keeps city names at the bottom */
+  padding: 30px;
+  color: white;
+}
+
+.city-text h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.city-text p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* The Floating Navbar */
+.nav-glass {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50; /* Stays on top of everything */
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 23px;
+  border-radius: 50px;
+  display: flex;
+  gap: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+/* .drift-logo {
+  width: 300px;
+} */
+.nav-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-btn.active {
+  background: #00adef;
+  color: white;
+  border-radius: 30px;
+}
+
+/* Centered Overlay Positioning */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 40;
+  width: 100%;
+  pointer-events: none; /* Allows mouse to click input through the container */
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+.logo-wrap img {
+  width: 400px;
+}
+.drift-title {
+  color: white;
+  font-size: 120px;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+}
+
+.tagline {
+  color: white;
+  margin: 20px 0 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* The Search Bar */
+.search-bar-pill {
+  pointer-events: all; /* Re-enables clicking for the input and button */
+  background: white;
+  display: flex;
+  align-items: center;
+  max-width: 650px;
+  margin: 0 auto;
+  border-radius: 50px;
+  padding: 8px 8px 8px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar-pill input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 10px;
+}
+
+.discover-button {
+  background: #00adef;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logo-wrap {
+  position: relative; /* Container for absolute positioning */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plane-icon {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%) rotate(-15deg); /* Initial rotation */
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: flyAround 10s linear infinite; /* Start flying around */
+}
+
+.drift-title {
+  color: white;
+  font-size: 120px;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+}
+
+@keyframes flyAround {
+  0% {
+    transform: translate(-50%, -50%) rotate(-15deg) translate(0px, 0px)
+      rotate(15deg); /* Start at center */
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(-15deg) translate(150px, -50px)
+      rotate(15deg); /* Top right curve */
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-15deg) translate(0px, -100px)
+      rotate(15deg); /* Top center curve */
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-15deg) translate(-150px, -50px)
+      rotate(15deg); /* Top left curve */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-15deg) translate(0px, 0px)
+      rotate(15deg); /* End at center */
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar-pill {
+    max-width: 90%;
+    padding: 8px 15px;
+  }
+  .discover-button {
+    padding: 12px 30px;
+    font-size: 0.5rem;
+  }
+  .search-bar-pill input {
+    font-size: 0.6rem;
+  }
+  .nav-btn {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+  }
+  .nav-glass {
+    top: 20px;
+  }
+}
