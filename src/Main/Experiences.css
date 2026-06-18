@@ -1,0 +1,114 @@
+.section-padding {
+  padding: 80px 10%;
+  background-color: #f7fcff;
+  text-align: center;
+}
+
+.city-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.city-pill.active {
+  background-color: #ff9f00; /* Use your theme's orange */
+  color: white;
+  border-color: #ff9f00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 159, 0, 0.3);
+}
+
+.city-pill.active .city-icon {
+  filter: brightness(0) invert(1); /* Makes the icon white if it's an image */
+}
+
+.no-results {
+  grid-column: 1 / -1; /* Centers the message across the grid */
+  padding: 40px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+.city-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  border: 1px solid #eee;
+  padding: 10px 20px;
+  border-radius: 50px; /* Essential for the pill shape */
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.city-pill:hover {
+  background: #f8f8f8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.city-icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+.section-title h2 {
+  color: #0077b6;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.card-layout-grid {
+  display: grid;
+  /* This creates 4 equal columns */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Reduced gap slightly to fit 4 cards better on smaller screens */
+  margin-top: 40px;
+  padding: 0 20px; /* Adds some breathing room on the sides */
+}
+
+/* Responsive Fix: You don't want 4 columns on a mobile phone! */
+@media (max-width: 1024px) {
+  .card-layout-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .card-layout-grid {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+}
+.card-layout-grid {
+  display: grid;
+  /* Default for desktop */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Tablet Layout (2 columns) */
+@media (max-width: 1024px) {
+  .card-layout-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone Layout (1 column) */
+@media (max-width: 600px) {
+  .card-layout-grid {
+    grid-template-columns: 1fr; /* Full width cards */
+    padding: 0 10px;
+  }
+
+  .experience-card {
+    max-width: 100% !important; /* Let cards take full width */
+    height: 320px; /* Shorter cards look better on small screens */
+  }
+  .city-filters {
+    flex-wrap: wrap; /* Allow pills to wrap on small screens */
+    gap: 8px; /* Slightly smaller gap for mobile */
+  }
+}

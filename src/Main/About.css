@@ -1,0 +1,127 @@
+.about-wrapper {
+  background: linear-gradient(160deg, var(--background-dark) 0%, var(--surface-dark) 100%);
+  min-height: 100vh;
+  padding: 100px 10%;
+  color: white;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.about-header p {
+  opacity: 0.7;
+  margin-bottom: 50px;
+  color: var(--gray-light);
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-card {
+  background: var(--surface-dark-light);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 25px;
+  padding: 40px;
+  color: var(--text-light);
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.story-section h2,
+.cta-section h2 {
+  color: var(--primary-teal);
+  margin-bottom: 20px;
+}
+.story-section p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: var(--gray-light);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.value-item h3 {
+  margin: 15px 0 10px;
+  color: var(--text-light);
+}
+.value-item p {
+  font-size: 0.9rem;
+  color: var(--gray-light);
+  line-height: 1.5;
+}
+.value-icon {
+  font-size: 1.5rem;
+  color: var(--primary-teal);
+}
+
+.our-story {
+  font-size: 40px;
+}
+.story-text {
+  font-size: 18px;
+  line-height: 1.8;
+}
+.about-sec {
+  font-size: 25px;
+  color: var(--text-light);
+}
+.about-p {
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--gray-light);
+}
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .about-wrapper {
+    padding: 80px 20px;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-header p {
+    font-size: 0.95rem;
+  }
+
+  .about-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .our-story {
+    font-size: 28px;
+  }
+
+  .story-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 15px;
+  }
+
+  .about-sec {
+    font-size: 20px;
+  }
+
+  .about-p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}

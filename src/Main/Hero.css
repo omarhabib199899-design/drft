@@ -1,0 +1,183 @@
+/* Ensure the wrapper takes the whole screen */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--background-dark);
+}
+
+/* Dark gradient hero background with soft glows */
+.hero-dark-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 194, 168, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(circle at 80% 75%, rgba(255, 122, 69, 0.12), transparent 45%),
+    linear-gradient(160deg, var(--background-dark) 0%, var(--surface-dark) 100%);
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+.hero-glow-teal {
+  width: 420px;
+  height: 420px;
+  top: -100px;
+  left: -100px;
+  background: var(--primary-teal);
+}
+
+.hero-glow-orange {
+  width: 380px;
+  height: 380px;
+  bottom: -120px;
+  right: -100px;
+  background: var(--accent-orange);
+}
+
+/* The Floating Navbar */
+.nav-glass {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50; /* Stays on top of everything */
+  background: rgba(19, 27, 46, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 23px;
+  border-radius: 50px;
+  display: flex;
+  gap: 5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--gray-light);
+}
+
+.nav-btn.active {
+  background: var(--primary-teal);
+  color: var(--background-dark);
+  border-radius: 30px;
+}
+
+/* Centered Overlay Positioning */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 40;
+  width: 100%;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.drift-logo-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 0 10px 40px rgba(0, 194, 168, 0.3);
+}
+
+.drift-title {
+  color: var(--text-light);
+  font-size: 80px;
+  font-weight: 900;
+  margin: 0;
+  line-height: 1;
+  background: linear-gradient(90deg, var(--primary-teal), var(--accent-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  color: var(--gray-light);
+  margin: 20px 0 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* The Search Bar */
+.search-bar-pill {
+  pointer-events: all; /* Re-enables clicking for the input and button */
+  background: var(--surface-dark-light);
+  display: flex;
+  align-items: center;
+  max-width: 650px;
+  margin: 0 auto;
+  border-radius: 50px;
+  padding: 8px 8px 8px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.search-bar-pill input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0 10px;
+  background: transparent;
+  color: var(--text-light);
+}
+
+.discover-button {
+  background: linear-gradient(90deg, var(--primary-teal), var(--primary-blue));
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .drift-title {
+    font-size: 48px;
+  }
+  .drift-logo-img {
+    width: 100px;
+    height: 100px;
+  }
+  .search-bar-pill {
+    max-width: 90%;
+    padding: 8px 15px;
+  }
+  .discover-button {
+    padding: 12px 30px;
+    font-size: 0.5rem;
+  }
+  .search-bar-pill input {
+    font-size: 0.6rem;
+  }
+  .nav-btn {
+    padding: 8px 15px;
+    font-size: 0.7rem;
+  }
+  .nav-glass {
+    top: 20px;
+  }
+}

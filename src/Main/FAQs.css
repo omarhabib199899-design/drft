@@ -1,0 +1,114 @@
+.faq-wrapper {
+  background: linear-gradient(160deg, var(--background-dark) 0%, var(--surface-dark) 100%);
+  min-height: 100vh;
+  padding: 120px 20px 80px;
+  color: white;
+  text-align: center;
+}
+
+.faq-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.faq-header p {
+  opacity: 0.7;
+  margin-bottom: 40px;
+  color: var(--gray-light);
+}
+
+.faq-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Accordion Item */
+.faq-item {
+  background: var(--surface-dark-light);
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+/* Question Header */
+.faq-question {
+  padding: 20px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none; /* Removes default arrow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none; /* Hide default arrow in Safari */
+}
+
+.faq-question .arrow {
+  font-size: 0.8rem;
+  color: var(--primary-teal);
+  transition: transform 0.3s ease;
+}
+
+/* Answer Content */
+.faq-answer {
+  padding: 0 25px 20px;
+  color: var(--gray-light);
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 15px;
+}
+
+/* Open State Animation */
+.faq-item[open] .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-footer {
+  margin-top: 50px;
+}
+
+.btn-contact {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent-orange) 0%, var(--accent-coral) 100%);
+  border: none;
+  padding: 15px 40px;
+  border-radius: 40px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.btn-contact:hover {
+  transform: scale(1.05);
+  color: white;
+}
+@media (max-width: 600px) {
+  .faq-container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .faq-question {
+    padding: 15px;
+    font-size: 0.9rem; /* Smaller font for long questions */
+  }
+
+  .faq-header h1 {
+    font-size: 1.8rem;
+  }
+}
